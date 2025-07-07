@@ -1,17 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import mountain from "./assets/images/mountains.jpg"
 
 function NavBar() {
   return (
-    <div className='flex flex-col items-center text-[#f8f9fa] font-bold font-serif text-lg pt-8 '>
-        <div className='flex gap-12 '>
+    <div className='flex flex-col items-center gt-super-bold text-[#f8f9fa] font-bold font-serif text-3xl pt-8 '>
+      
+        <div className='flex justify-center gap-12 border-t-2 border-b-2 border-[#ffffff] pt-6 pb-6 w-screen'>
           <Link className='hover:underline underline-offset-8 ' to="/chitra/">Home</Link>
-          <Link className='cursor-not-allowed' to="/chitra/upcomings">Upcomings</Link>
-          <Link className='cursor-not-allowed' to="/chitra/about">About</Link>
-          <Link className='cursor-not-allowed' to="/chitra/report">Report</Link>
+          <Link className='text-[#6c757d] cursor-not-allowed' to="/chitra/">Upcomings</Link>
+          <Link className='text-[#6c757d] cursor-not-allowed' to="/chitra/">About</Link>
+          <Link className='text-[#6c757d] cursor-not-allowed' to="/chitra/">Report</Link>
         </div>
-        
+      
         
 
     </div>

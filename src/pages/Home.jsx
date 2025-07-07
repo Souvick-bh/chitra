@@ -4,18 +4,6 @@ import { Link } from 'react-router-dom'
 import mountain from "../assets/images/mountains.jpg"
 
 function Home() {
-  // const [index,setIndex] = useState(0)
-  // const words = ["downloads","installs","setups","fuss","hassle"]
-
-  
-
-  // useEffect( () => {
-  //    const interval = setInterval(() => {
-  //     setIndex((prev) => (prev + 1) % words.length);
-  //   }, 2000);
-
-  //   return () => clearInterval(interval);
-  // },[])
 
   return (
     <div className='flex flex-col justify-between font-bold font-serif  '>

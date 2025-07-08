@@ -12,7 +12,7 @@ function App() {
   
 
   return (
-    <div className='bg-[#0e1012] h-full flex flex-col justify-items-center'>
+    <div className='bg-[#0e1012] min-h-screen flex flex-col justify-items-center'>
       
       <BrowserRouter>
         <div className=''>

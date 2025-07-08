@@ -6,12 +6,13 @@ import  Home  from './pages/Home'
 import Upcomings from './pages/Upcomings'
 import About from './pages/About'
 import Report from './pages/Report'
+import Footer from './Components/Footer'
 
 function App() {
   
 
   return (
-    <div className='bg-[#0e1012] h-dvh flex flex-col justify-items-center'>
+    <div className='bg-[#0e1012] h-full flex flex-col justify-items-center'>
       
       <BrowserRouter>
         <div className=''>
@@ -25,6 +26,7 @@ function App() {
           <Route path="/chitra/report" element={<Report />}></Route>
           <Route path="/chitra/bgremover" element={<BgRemover />}></Route>
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   )

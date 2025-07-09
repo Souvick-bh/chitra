@@ -6,8 +6,9 @@ function Footer() {
     <div className='border-t-2 border-[#ffffff] flex flex-col  '>
 
         <div className='flex items-center justify-center gap-10 m-12'>
-            <input className='h-30 w-100 bg-[#53c2e1] rounded-2xl text-center font-bold font-serif text-xl' type="text" placeholder='Got Any Idea'/>
-            <button className='pt-3 pb-3 pl-6 pr-6 duration-150 ease-in-out bg-[#ffffff] cursor-pointer hover:border-[#ffffff] hover:bg-[#000000] hover:text-[#dc9239] font-bold font-serif text-center text-2xl rounded-2xl border-2 border-[#000000] shadow-xl/30 shadow-orange-500/50'>Send</button>
+            <input className='h-30 w-100 bg-[#53c2e1] rounded-2xl text-center font-bold font-serif text-xl' type="text" placeholder='Not Yet Functional'/>
+            <button className='pt-3 pb-3 pl-6 pr-6 duration-150 ease-in-out bg-[#ffffff] cursor-pointer hover:border-[#ffffff] hover:bg-[#000000]
+             hover:text-[#dc9239] font-bold font-serif text-center text-2xl rounded-2xl border-2 border-[#000000] shadow-xl/30 shadow-orange-500/50 '>Send</button>
         </div>
 
         <div className='flex flex-col ml-25 justify-items-start'>

@@ -26,7 +26,7 @@ function App() {
           <Route path="/chitra/report" element={<Report />}></Route>
           <Route path="/chitra/bgremover" element={<BgRemover />}></Route>
         </Routes>
-        <Footer />
+        
       </BrowserRouter>
     </div>
   )

@@ -20,6 +20,10 @@ function BgRemover() {
       alert("Please select a file first");
       return;
     }
+    if(isLoading) {
+      alert("Already processing, please wait");
+      return;
+    }
     try {
       setIsLoading(true);
         const resultblob = await removeBackground(file);
@@ -36,21 +40,23 @@ function BgRemover() {
   
   return (
     <div className="flex flex-col items-center ">
-      <div className=" mt-10 flex flex-row gap-15 justify-around">
-        <Avatar src={file} alt="Avatar" emptyLabel="Select Image" changeLabel="Change Image" onChange={updateFile} />
+      <div className=" mt-10 ml- flex flex-col lg:flex-row gap-15 justify-center items-center">
         <div className='w-80 flex flex-col justify-center'>
           <h2 className='text-center underline underline-offset-4 font-bold font-serif text-[#dee2e6]'>Things to keep in Mind</h2>
           <div className=' font-medium font-sans text-[#ced4da] mt-3'>
-              <h3>1. Foreground & Background should have differentiable color contrast.</h3>
-              <h3>2. The image should be in PNG or JPG format.</h3>
-              <h3>3. The image should be less than 10MB.</h3>
+              <h3>1. It does not reduce your image resolution and size.</h3>
+              <h3>2. Foreground & Background should have differentiable color contrast.</h3>
+              <h3>3. The image should be in PNG or JPG format.</h3>
+              <h3>4. Images having high resolution takes time to get converted.</h3>
           </div>
           
         </div>
+        <Avatar src={file} alt="Avatar" emptyLabel="Select Image" changeLabel="Change Image" onChange={updateFile} />
+        
       </div>
-      <button className="m-6 border-2 p-4 rounded-2xl cursor-pointer text-[#f8f9fa] font-bold font-serif text-lg  hover:bg-[#495057] active:border-[#071316]" onClick={removebg}>Remove BackGround</button>
+      <button className="m-10 border-2 p-4 rounded-2xl cursor-pointer text-[#f8f9fa] font-bold font-serif text-lg  hover:bg-[#495057] active:border-[#071316]" onClick={removebg}>Remove BackGround</button>
       <div>
-        {isLoading && <p className="text-amber-50 mt-1 mb-2">Processing...</p>}
+        {isLoading && <p className="text-[#ff8861] mt-1 mb-10">Processing... wait a little </p>}
       </div>
       {resultUrl &&<div>
         {resultUrl && <h2 className="text-2xl text-[#f8f9fa] font-bold font-serif text-center mt-2 mb-6">Result</h2>}

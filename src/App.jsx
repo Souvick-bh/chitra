@@ -1,12 +1,13 @@
 import './App.css'
 import { BrowserRouter,Routes,Route,Link } from 'react-router-dom'
 import BgRemover from './services/BgRemover'
+import TextInBetween from './services/TextInBetween'
 import NavBar from './NavBar'
 import  Home  from './pages/Home'
 import Upcomings from './pages/Upcomings'
 import About from './pages/About'
 import Report from './pages/Report'
-import Footer from './Components/Footer'
+
 
 function App() {
   
@@ -25,6 +26,7 @@ function App() {
           <Route path="/chitra/about" element={<About />}></Route>
           <Route path="/chitra/report" element={<Report />}></Route>
           <Route path="/chitra/bgremover" element={<BgRemover />}></Route>
+          <Route path="/chitra/betweentext" element={<TextInBetween />}></Route>
         </Routes>
         
       </BrowserRouter>

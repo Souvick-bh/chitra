@@ -39,7 +39,7 @@ function BgRemover() {
   
   
   return (
-    <div className="flex flex-col items-center ">
+    <div className="flex min-h-screen flex-col items-center ">
       <div className=" mt-10 ml- flex flex-col lg:flex-row gap-15 justify-center items-center">
         <div className='w-80 flex flex-col justify-center'>
           <h2 className='text-center underline underline-offset-4 font-bold font-serif text-[#dee2e6]'>Things to keep in Mind</h2>
@@ -60,16 +60,16 @@ function BgRemover() {
       </div>
       {resultUrl &&<div>
         {resultUrl && <h2 className="text-2xl text-[#f8f9fa] font-bold font-serif text-center mt-2 mb-6">Result</h2>}
-         <div className="space-y-2 max-h-80 max-w-70 flex items-center justify-center border border-gray-200 rounded-4xl p-5">
+         <div className="space-y-2 max-w-70 flex items-center justify-center border border-gray-200 rounded-4xl p-5">
           <div className="flex flex-col justify-center w-full">
             <img
               src={resultUrl}
               alt="result"
-              className="mx-auto max-h-[300px] w-auto object-contain"
+              className="mx-auto max-w-[200px] h-auto object-contain"
             />
             <a
               href={resultUrl}
-              download="no-bg.png"
+              download="no-background.png"
               className="flex items-center  justify-center gap-2 mt-6 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
             >
               <Download className="shrink-0 size-5" />

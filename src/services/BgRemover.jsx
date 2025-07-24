@@ -9,9 +9,8 @@ function BgRemover() {
   const [file, setFile] = useState(null);
   const [resultUrl, setResultUrl] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-
-  
-  
+  const [processText,setProcessText] = useState("Remove BackGround")
+    
   const updateFile = (selectedFile) => {
     setFile(selectedFile);
   }
@@ -26,6 +25,7 @@ function BgRemover() {
     }
     try {
       setIsLoading(true);
+        setProcessText("Processing");
         const resultblob = await removeBackground(file);
         const url = URL.createObjectURL(resultblob);
         setResultUrl(url);
@@ -33,6 +33,7 @@ function BgRemover() {
       console.error(error)
     } finally {
       setIsLoading(false);
+      setProcessText("Remove BackGround")
     }
     
   }
@@ -40,7 +41,7 @@ function BgRemover() {
   
   return (
     <div className="flex min-h-screen flex-col items-center ">
-      <div className=" mt-10 ml- flex flex-col lg:flex-row gap-15 justify-center items-center">
+      <div className=" mt-4 ml- flex flex-col lg:flex-row gap-15 justify-center items-center">
         <div className='w-80 flex flex-col justify-center'>
           <h2 className='text-center underline underline-offset-4 font-bold font-serif text-[#dee2e6]'>Things to keep in Mind</h2>
           <div className=' font-medium font-sans text-[#ced4da] mt-3'>
@@ -54,13 +55,13 @@ function BgRemover() {
         <Avatar src={file} alt="Avatar" emptyLabel="Select Image" changeLabel="Change Image" onChange={updateFile} />
         
       </div>
-      <button className="m-10 border-2 p-4 rounded-2xl cursor-pointer text-[#f8f9fa] font-bold font-serif text-lg  hover:bg-[#495057] active:border-[#071316]" onClick={removebg}>Remove BackGround</button>
-      <div>
+      <button className="m-10 border-2 p-4 rounded-2xl cursor-pointer text-[#f8f9fa] font-bold font-serif text-lg text-shadow-lg/90 opacity-65 hover:bg-[#53c2e1] active:border-[#071316]" onClick={removebg}>{processText}</button>
+      {/* <div>
         {isLoading && <p className="text-[#ff8861] mt-1 mb-10">Processing... wait a little </p>}
-      </div>
+      </div> */}
       {resultUrl &&<div>
-        {resultUrl && <h2 className="text-2xl text-[#f8f9fa] font-bold font-serif text-center mt-2 mb-6">Result</h2>}
-         <div className="space-y-2 max-w-70 flex items-center justify-center border border-gray-200 rounded-4xl p-5">
+        {resultUrl && <h2 className="text-2xl text-[#f8f9fa] font-medium font-serif text-center mt-2 mb-6">Result</h2>}
+         <div className="space-y-2 max-w-70 flex items-center justify-center overflow-auto border border-gray-200 rounded-4xl p-5">
           <div className="flex flex-col justify-center w-full">
             <img
               src={resultUrl}

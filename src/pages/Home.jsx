@@ -8,10 +8,10 @@ function Home() {
 
   return (
     <div>
-    <div className='flex flex-col justify-between font-bold font-serif  '>
+    <div className='flex flex-col justify-between font-medium font-serif  '>
 
-      <div className='w-screen text-amber-50 pt-10 pb-10 text-center border-b-2 border-[#ffffff] '>
-        <div className='inline-flex gap-5 text-3xl sm:text-5xl'>
+      <div className='w-screen text-amber-50 pt-6 pb-10 text-center '>
+        <div className='inline-flex gap-5 text-2xl sm:text-4xl'>
           <h1 className=''>Skip the </h1>
           <h1 className='text-[#53c2e1]'><Typewriter options={{
                     strings: ["downloads","installs","setups","fuss","hassle"],
@@ -19,7 +19,7 @@ function Home() {
                     loop: true,
               }}/></h1>
         </div>
-        <h1 className='text-3xl sm:text-5xl mt-6'>One click, done!</h1>
+        <h1 className='text-2xl sm:text-4xl mt-6'>One click, done!</h1>
       </div>
 
         <div className='flex flex-col md:flex-row items-center md:justify-around gap-10 mt-6 mb-6'>
@@ -29,12 +29,7 @@ function Home() {
                   <Link className='absolute inset-0 flex items-center justify-center text-xl text-shadow-lg shadow-amber-50 text-[#0a0909] text-shadow-white' to="/chitra/bgremover">
                   Remove BackGround</Link>
                 </div>
-
-                <div id='between-text' className='h-40 w-70 rounded-2xl bg-amber-500'>
-
-                </div>
         </div>
-        
     </div>
     <Footer />
     </div>

@@ -3,6 +3,7 @@ import {React,useEffect,useState} from 'react'
 import { removeBackground } from "@imgly/background-removal";
 import { Avatar } from "@files-ui/react";
 import { Download } from "lucide-react";
+import loader from '../assets/images/loader.gif'
 
 function BgRemover() {
     
@@ -55,7 +56,10 @@ function BgRemover() {
         <Avatar src={file} alt="Avatar" emptyLabel="Select Image" changeLabel="Change Image" onChange={updateFile} />
         
       </div>
-      <button className="m-10 border-2 p-4 rounded-2xl cursor-pointer text-[#f8f9fa] font-bold font-serif text-lg text-shadow-lg/90 opacity-65 hover:bg-[#53c2e1] active:border-[#071316]" onClick={removebg}>{processText}</button>
+      <div className="flex flex-row items-center justify-center m-10 border-2 p-4 rounded-2xl cursor-pointer text-[#f8f9fa] font-bold font-serif text-lg
+       text-shadow-lg/90 opacity-65 hover:bg-[#53c2e1] active:border-[#071316]" onClick={removebg}>
+        {isLoading && <img src={loader} className='w-6 h-6 rounded-4xl mr-2 '/>}
+        {processText}</div>
       {/* <div>
         {isLoading && <p className="text-[#ff8861] mt-1 mb-10">Processing... wait a little </p>}
       </div> */}

@@ -11,7 +11,7 @@ function Home() {
     <div className='flex flex-col justify-between font-medium font-serif  '>
 
       <div className='w-screen text-amber-50 pt-6 pb-10 text-center '>
-        <div className='inline-flex gap-5 text-2xl sm:text-4xl'>
+        <div className='inline-flex gap-2 sm:gap-4 text-2xl sm:text-4xl'>
           <h1 className=''>Skip the </h1>
           <h1 className='text-[#53c2e1]'><Typewriter options={{
                     strings: ["downloads","installs","setups","fuss","hassle"],

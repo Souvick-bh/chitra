@@ -1,4 +1,4 @@
-
+import Typewriter from 'typewriter-effect';
 import {React,useEffect,useState} from 'react'
 import { removeBackground } from "@imgly/background-removal";
 import { Avatar } from "@files-ui/react";
@@ -43,20 +43,25 @@ function BgRemover() {
   return (
     <div className="flex min-h-screen flex-col items-center ">
       <div className=" mt-4 ml- flex flex-col lg:flex-row gap-15 justify-center items-center">
-        <div className='w-80 flex flex-col justify-center'>
+        <div className='w-100 flex flex-col justify-center'>
           <h2 className='text-center underline underline-offset-4 font-bold font-serif text-[#dee2e6]'>Things to keep in Mind</h2>
-          <div className=' font-medium font-sans text-[#ced4da] mt-3'>
-              <h3>1. It does not reduce your image resolution and size.</h3>
-              <h3>2. Foreground & Background should have differentiable color contrast.</h3>
-              <h3>3. The image should be in PNG or JPG format.</h3>
-              <h3>4. Images having high resolution takes time to get converted.</h3>
+          <div className=' font-medium font-sans h-10 text-[#ced4da] mt-10'>
+              <h3><Typewriter options={{
+                    strings: ["1. It does not reduce your image resolution and size.",
+                      "2. Foreground & Background should have differentiable color contrast.",
+                      "3. The image should be in PNG or JPG format.",
+                      "4. Images having high resolution takes time to get converted.",],
+                    autoStart: true,
+                    loop: true,
+              }}/></h3>
+              
           </div>
           
         </div>
         <Avatar src={file} alt="Avatar" emptyLabel="Select Image" changeLabel="Change Image" onChange={updateFile} />
         
       </div>
-      <div className="flex flex-row items-center justify-center m-10 border-2 p-4 rounded-2xl cursor-pointer text-[#f8f9fa] font-bold font-serif text-lg
+      <div className="flex flex-row items-center justify-center m-10 border-2 p-4 rounded-2xl cursor-pointer text-[#f8f9fa] font-medium font-serif text-lg
        text-shadow-lg/90 opacity-65 hover:bg-[#53c2e1] active:border-[#071316]" onClick={removebg}>
         {isLoading && <img src={loader} className='w-6 h-6 rounded-4xl mr-2 '/>}
         {processText}</div>
@@ -65,7 +70,7 @@ function BgRemover() {
       </div> */}
       {resultUrl &&<div>
         {resultUrl && <h2 className="text-2xl text-[#f8f9fa] font-medium font-serif text-center mt-2 mb-6">Result</h2>}
-         <div className="space-y-2 max-w-70 flex items-center justify-center overflow-auto border border-gray-200 rounded-4xl p-5">
+         <div className="space-y-2 max-w-70 flex items-center justify-center overflow-auto border border-gray-200 rounded-4xl p-5 mb-15">
           <div className="flex flex-col justify-center w-full">
             <img
               src={resultUrl}

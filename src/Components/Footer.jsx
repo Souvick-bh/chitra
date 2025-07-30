@@ -3,11 +3,22 @@ import { FaSquareXTwitter,FaGithub,FaDiscord,FaInstagram } from "react-icons/fa6
 
 function Footer() {
   return (
-    <div className=' flex flex-col  '>
+    <div className=' flex flex-col justify-center items-center mt-10 '>
 
-        <div className='flex flex-col mt-6 mb-15 ml-25 justify-items-start'>
-            <h1 className='text-[#ffffff] text-2xl sm:text-3xl font-medium font-serif'>Meet The Devs:</h1>
-            <h2 className='text-[#ffffff] text-xl font-bold font-serif'></h2>
+        <div className="flex flex-row font-medium text-lg md:text-3xl mb-40">
+          <h1 className="pl-2 pr-5 text-amber-50">The Dev : Souvick Bhowmick</h1>
+          <div className="flex flex-row justify-center items-center gap-4">
+              <a href='https://x.com/SouvickBho17054'>
+                  <FaSquareXTwitter  className='cursor-pointer text-amber-50 active:text-[#717273]' />
+              </a>
+              <a href='https://github.com/Souvick-bh'>
+                  <FaGithub className='cursor-pointer text-amber-50 active:text-[#717273]'/>
+              </a>
+              <a href="https://www.instagram.com/__souvick_bhowmick__/">
+                  <FaInstagram className='cursor-pointer text-amber-50 active:text-[#717273]'/>
+              </a>
+          </div>
+                    
         </div>
     </div>
   )

@@ -13,8 +13,6 @@ function NavBar() {
           <Link className='hover:underline active:underline hover:text-[#53c2e1] active:text-[#53c2e1] underline-offset-8 ' to="/chitra/">Home</Link>
           <Link className='hover:underline active:underline hover:text-[#53c2e1] active:text-[#53c2e1] underline-offset-8 ' to="/chitra/bgremover">Remover</Link>
           
-          {/* <Link className='hover:underline active:underline hover:text-[#53c2e1] active:text-[#53c2e1] underline-offset-8 ' to="/chitra/textadder">About</Link> */}
-          
         </span>
       
         <div className='w-screen h-[1px] bg-amber-50 text-amber-50 opacity-30'></div>

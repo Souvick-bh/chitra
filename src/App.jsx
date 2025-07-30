@@ -25,7 +25,7 @@ function App() {
           <Route path="/chitra/" element={<Home />}></Route>
           <Route path="/chitra/about" element={<About />}></Route>
           <Route path="/chitra/bgremover" element={<BgRemover />}></Route>
-          <Route path='/chitra/textadder' element={<TextInBetween/>}></Route>
+
         </Routes>
         
       </BrowserRouter>

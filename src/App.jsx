@@ -4,7 +4,7 @@ import BgRemover from './services/BgRemover'
 import NavBar from './Components/NavBar'
 import  Home  from './pages/Home'
 import About from './pages/About'
-import TextInBetween from './services/TextInBetween'
+
 
 
 function App() {

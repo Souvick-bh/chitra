@@ -63,7 +63,7 @@ function BgRemover() {
       </div>
       <div className="flex flex-row items-center justify-center m-10 border-2 p-4 rounded-2xl cursor-pointer text-[#f8f9fa] font-medium font-serif text-lg
        text-shadow-lg/90 opacity-65 hover:bg-[#53c2e1] active:border-[#071316]" onClick={removebg}>
-        {isLoading && <img src={loader} className='w-6 h-6 rounded-4xl mr-2 '/>}
+        {isLoading && <img  src={loader} className='w-6 h-6 rounded-4xl mr-2 '/>}
         {processText}</div>
       {/* <div>
         {isLoading && <p className="text-[#ff8861] mt-1 mb-10">Processing... wait a little </p>}

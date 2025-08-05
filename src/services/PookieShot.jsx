@@ -1,7 +1,7 @@
 import {useEffect,useRef,useState} from 'react'
 import { removeBackground } from "@imgly/background-removal";
 import { Avatar } from "@files-ui/react";
-import magic from '../assets/images/magic.gif';
+import loader from '../assets/images/loader.gif'
 
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
@@ -70,12 +70,12 @@ function PookieShot() {
   
   return (
     <div className="flex min-h-screen flex-col items-center ">
-      <div className=" mt-4 h-10 flex flex-col lg:flex-row gap-15 justify-center items-center">
+      <div className=" mt-4 h-10 flex flex-col gap-15 justify-center items-center">
         <Avatar src={file} alt="Avatar" emptyLabel="Select Image" changeLabel="Change Image" onChange={updateFile} />
       </div>
       
     {fileCopy && <h2 className="text-2xl text-[#f8f9fa] inline-flex font-medium font-serif items-center text-center mt-6 mb-6">
-      {magicCond && <img src={magic} className='bg-[#ffffff] h-6 p-[1px] mr-4 items-center rounded-full' />}
+      {magicCond && <img  src={loader} className='bg-[#ffffff] h-6 p-[1px] mr-4 items-center rounded-full' />}
       {processText}</h2> }
       {resultUrl &&<div className='flex flex-col items-center justify-center'>
         

@@ -1,6 +1,7 @@
 import './App.css'
 import { BrowserRouter,Routes,Route,Link } from 'react-router-dom'
 import BgRemover from './services/BgRemover'
+import PookieShot from './services/PookieShot'
 import NavBar from './Components/NavBar'
 import  Home  from './pages/Home'
 import About from './pages/About'
@@ -25,7 +26,7 @@ function App() {
           <Route path="/chitra/" element={<Home />}></Route>
           <Route path="/chitra/about" element={<About />}></Route>
           <Route path="/chitra/bgremover" element={<BgRemover />}></Route>
-
+          <Route path='/chitra/pookieshot' element={<PookieShot />}></Route>
         </Routes>
         
       </BrowserRouter>

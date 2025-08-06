@@ -3,10 +3,7 @@ import { removeBackground } from "@imgly/background-removal";
 import { Avatar } from "@files-ui/react";
 import loader from '../assets/images/loader.gif'
 
-import { FaArrowLeft } from "react-icons/fa";
-import { FaArrowRight } from "react-icons/fa";
-import { FaArrowUp } from "react-icons/fa";
-import { FaArrowDown } from "react-icons/fa";
+import { FaArrowLeft,FaArrowRight,FaArrowUp,FaArrowDown } from "react-icons/fa";
 
 import JoditEditor from 'jodit-react';
 import * as htmlToImage from 'html-to-image';
@@ -19,7 +16,6 @@ function PookieShot() {
   const [fileCopy,setFileCopy] = useState(null);
   const [resultUrl, setResultUrl] = useState(null);
   const [processText,setProcessText] = useState(null)
-  
 
   const editor = useRef(null);
   const contentRef = useRef(null)
@@ -29,12 +25,23 @@ function PookieShot() {
   const [topVal,setTopVal] = useState(20);
   const [leftVal,setLeftVal] = useState(20);
 
-  const capture = () => {
+  function namer() {
+    const list = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let name_of_img = '';
+    for (let i=0; i<12 ; i++) {
+      name_of_img += list.charAt(Math.floor(Math.random() * list.length));
+    }
+    return name_of_img;
+  }
 
-  htmlToImage.toJpeg(document.getElementById('my-node'), { quality: 0.95 })
+  const capture = () => {
+    const image_id = namer();
+
+  htmlToImage
+  .toJpeg(document.getElementById('my-node'), { quality: 1.0 })
   .then(function (dataUrl) {
     var link = document.createElement('a');
-    link.download = 'new-image.jpeg';
+    link.download = `${image_id}.jpeg`;
     link.href = dataUrl;
     link.click();
   });
@@ -64,7 +71,6 @@ function PookieShot() {
   useEffect(() => {
     removebg()
   },[file])
-
 
   
   
@@ -102,7 +108,7 @@ function PookieShot() {
           <button className='text-[#ffffff] cursor-pointer active:text-[#545454] p-2 border-2 rounded-4xl' onClick={() => setLeftVal(prev => prev - 5)}><FaArrowLeft /></button>
         </div>
 
-        <div className='flex w-90 mb-48 rounded-4xl'>
+        <div className='flex w-90 h-80 mb-48 rounded-4xl'>
             <JoditEditor ref={editor} value={content} 
               onChange={(newContent) => setContent(newContent)}
             />

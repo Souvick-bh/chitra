@@ -33,8 +33,8 @@ function Home() {
 
         <div>
           <div className='flex flex-col gap-12 items-center'>
-            <Link className='text-[#ffffff] font-bold border-2 p-4 rounded-4xl cursor-pointer text-shadow-lg/90 inset-shadow-sm inset-shadow-indigo-950 active:bg-[#2c2c2c] bg-[#53c2e1]' to="/chitra/bgremover">Remove BackGround</Link>
-            <Link className='text-[#ffffff] font-bold border-2 p-4 rounded-4xl cursor-pointer text-shadow-lg/90 inset-shadow-sm inset-shadow-indigo-950 active:bg-[#2c2c2c] bg-[#53c2e1]' to="/chitra/pookieshot">Text in Between</Link>
+            <Link className='text-[#ffffff] font-bold border-2 p-4 rounded-2xl cursor-pointer text-shadow-lg/90 inset-shadow-sm inset-shadow-indigo-950 active:bg-[#2c2c2c] bg-[#53c2e1]' to="/chitra/bgremover">Remove BackGround</Link>
+            <Link className='text-[#ffffff] font-bold border-2 p-4 rounded-2xl cursor-pointer text-shadow-lg/90 inset-shadow-sm inset-shadow-indigo-950 active:bg-[#2c2c2c] bg-[#53c2e1]' to="/chitra/pookieshot">Text in Between</Link>
           </div>
         </div>
 

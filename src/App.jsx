@@ -23,7 +23,7 @@ function App() {
         </div>
         
         <Routes>
-          <Route path="/" element={<Home />}></Route>
+          <Route path="/chitra/" element={<Home />}></Route>
           <Route path="/chitra/about" element={<About />}></Route>
           <Route path="/chitra/bgremover" element={<BgRemover />}></Route>
           <Route path='/chitra/pookieshot' element={<PookieShot />}></Route>
